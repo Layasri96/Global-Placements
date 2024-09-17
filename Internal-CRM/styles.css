@@ -48,7 +48,9 @@ select,input,button{
 ::-webkit-scrollbar-thumb:hover {
   background: var(--scrollbar-thumb-hover);
 }
-
+.button{
+  cursor: pointer;
+}
 .sidebar-container {
   width: 250px;
   height: 100%;
@@ -98,7 +100,7 @@ select,input,button{
 }
 
 .sidebar-nav ul li {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .sidebar-nav-item{
   width: 130px;
@@ -213,7 +215,7 @@ select,input,button{
   top: 0;
   width: auto;
   padding: 10px;
-  /* background-color: #ffffff; */
+  background-color: #ffffff;
 }
 
 .header {
@@ -1263,7 +1265,7 @@ margin: 0px 2px;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .advanced-filter-content .form-group input[type="date"],
@@ -1478,6 +1480,7 @@ input[type="radio"] {
 .button-group {
     display: flex;
     gap: 10px;
+    background-color: #fafafa;
 }
 .icon-button {
  padding: 5px;
@@ -1500,11 +1503,15 @@ input[type="radio"] {
   display: flex;
   align-items: center;
   margin-top: 16px;
+  justify-content: space-between;
 }
-
+.comments-section svg{
+height: 16px;
+width: 16px;
+}
 .comments-input {
-  flex-grow: 1;
-  padding: 6px 8px;
+  width: 85%;
+  padding: 8px 16px;
   font-size: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -2134,6 +2141,7 @@ position: relative;
   position: relative;
   left: 220px;
  max-width: 650px;
+ margin: 25px 0px 0px 0px;
 }
  .profile-popup {
   display: flex;
@@ -2141,35 +2149,37 @@ position: relative;
   position: relative;
   
 }
-
+.profile .form-sections{
+  padding: 10px;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+   border-radius: 10px;
+   background-color: #fff}
 .quick-links {
   width: 200px;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #fff;
   border-radius: 10px ;
   border: 1px solid #004957;
-  height: 80vh;
+  height: 60vh;
   position:fixed;
   top: 100px;
 }
 .quick-links h2{
  color:#004957;
  text-align: center;
-
 }
-.quick-links  a{
+.quick-links  li{
+  list-style: none;
+  margin: 10px 0;
+  font-size: 12px;
+  border-bottom: 2px  #cfcfcf;
+  font-weight: 500;
+  cursor: pointer;
+}
+.quick-links a{
 text-decoration: none;
 color: #005F6B;
 }
-.quick-links  li{
-list-style: none;
-margin: 10px 0;
-font-size: 12px;
-border-bottom: 2px  #cfcfcf;
-font-weight: 500;
-}
-
-
 
 section {
   margin-bottom: 30px;
@@ -2288,22 +2298,41 @@ section {
 
 
 
+ .form-title-header  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
  .form-title-header h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: #333;
+  color: #006b77;
+}
+ .form-title-header button {
+ border: none;
+ cursor: pointer;
+ padding: 10px;
+  margin-bottom: 15px;
+  background-color: #fff;
+font-size:14px ;
+}
+ .form-title-header svg {
+ margin-right: 5px;
 }
 
 .form-container {
   background-color: #ffffff;
-  padding: 30px;
+  padding: 30px
+  15px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 330px);
   gap: 20px;
 }
 
@@ -2329,6 +2358,11 @@ section {
 .form-group-left-max label,.form-group-left-max input{
   width: 200px;
 }
+.profile label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000000;
+}
 .profile-popup label {
   margin-bottom: 5px;
   font-weight: bold;
@@ -2345,6 +2379,7 @@ section {
   border-radius: 4px;
   font-size: 16px;
   width: 100%;
+  gap:4px;
   background-color: #fafafa;
   transition: border-color 0.3s;
 } 
@@ -2384,8 +2419,7 @@ select:focus {
 .marital-status-options,
 .measurement-options {
   display: flex;
-  gap: 10px;
-  flex: 1;
+  gap: 5px;
 }
 .form-row {
     display: flex;
@@ -2399,7 +2433,7 @@ select:focus {
 .gender-option,
 .status-option,
 .measure-option {
-  padding: 10px 15px;
+  padding: 6px 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
@@ -2429,9 +2463,38 @@ select:focus {
   display: flex;
 }
 
+
+
+
 .star {
-  font-size: 24px;
-  background-color: #005F6B;
+    cursor: pointer;
+    display: inline-block;
+      font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+
+.star svg {
+    transition: fill 0.3s ease;
+     margin-right: 5px;
+}
+
+ 
+.star .star-filled {
+    display: none;
+    
+    color:#00798c;/* Set the color of filled stars to yellow */
+}
+
+.star .star-light {
+    fill: gray;
+}
+
+.star.active .star-light {
+    display: none;
+}
+
+.star.active .star-filled {
+    display: inline-block;
 }
 
 .checkbox-wrapper {
@@ -2528,11 +2591,21 @@ select:focus {
   cursor: pointer;
 }
 
+.scores-group  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .scores-group input {
-  flex: 1;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid black;
   border-radius: 4px;
+  margin-left: 5px;
+}
+.scores-group input:focus {
+
+  border: 1px solid #006b77;
+
 }
 
 .profile-popup .checkbox-group {
@@ -2670,6 +2743,17 @@ select:focus {
     background-repeat: no-repeat;
     background-position: right 10px center;
     cursor: pointer;
+}
+
+.approvals-filter__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 12px;
+    color: #333;
+    appearance: none;
 }
 
 /* Date range container */
@@ -2846,4 +2930,162 @@ background-color: #dcdbdb;
     .rejected-filter__group {
         flex-basis: 100%;
     }
+}
+
+.popup-overlay .admin-info{
+ display: inline-block;
+  color: #999;
+  font-size: 0.9em;
+}
+.popup-overlay .task-description {
+  margin-bottom: 20px;
+}
+.popup-overlay .candidate-section {
+  margin-bottom: 20px;
+}
+
+.popup-overlay .candidate-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.popup-overlay .candidate-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.popup-overlay .add-more-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.popup-overlay .timestamp {
+  display: inline-block;
+  color: #999;
+  font-size: 0.9em;
+}
+.popup-overlay .candidate-item:last-child {
+  border-bottom: none;
+}
+.popup-overlay .candidate-id {
+  flex: 1;
+  margin-right: 10px;
+  color: #008080;
+}
+.popup-overlay .candidate-status {
+  flex: 2;
+  margin-right: 10px;
+}
+.popup-overlay .admin-name {
+  flex: 1;
+  text-align: right;
+  color: #666;
+}
+.popup-overlay .last-update {
+  display: inline-block;
+  color: #999;
+  font-size: 0.9em;
+}
+.popup-overlay .candidate-header {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.popup-overlay .popup-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px;
+}
+
+.popup-overlay .close-button {
+  width: 30%;
+  padding: 10px;
+  background-color: #008080;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.notification-container {
+width: 100%;
+  margin: 0 auto;
+   min-width: 1240px;
+   background-color: white;
+   border-radius: 8px;
+   padding: 10px;
+}
+
+.notification-row {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.notification-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.notification-content {
+  flex-grow: 1;
+  margin-right: 15px;
+}
+
+.notification-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between title and label */
+}
+
+.notification-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.notification-label {
+    background-color: #007bff;
+    color: white;
+    padding: 3px 6px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.notification-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.notification-description {
+  font-size: 14px;
+  margin: 0 0 5px 0;
+  color: #666;
+  line-height: 1.4;
+}
+
+.notification-admin {
+  font-size: 12px;
+  margin: 0;
+  color: #888;
+}
+
+.notification-timestamp {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #888;
+  align-self: flex-start;
+  margin-top: 3px;
 }
