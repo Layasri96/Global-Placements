@@ -249,21 +249,21 @@
   <div class="container">
     <div class="header">
       <div class="header-title">
-        <select name="" id="">
+        <!-- <select name="" id="">
           <option>Nurses</option>
           <option>Teachers</option>
           <option>Lecturers</option>
           <option>Paramedics</option>
           <option>Doctors</option>
-        </select>
-       <h2>/</h2>
-        <select name="" id="">
+        </select> -->
+       <h2>Nurses/</h2>
+        <!-- <select name="" id="">
           <option>Country</option>
           <option>Country 1</option>
           <option>Country 2</option>
           <option>Country 3</option>
-        </select>
-       <h2>/</h2>
+        </select> -->
+       <h2>Country1/</h2>
         <select name="" id="">
           <option>Project 1</option>
         </select>
@@ -279,7 +279,36 @@
 
       </div>
     </div>
-    <div class="main-content-global-database">
+    <div class="main-content-global-database"> 
+      <div class="filters-section">
+      <div class="filter1">
+        <button class="icon-button">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M8 12L3 7L4.4 5.55L7 8.15V0H9V8.15L11.6 5.55L13 7L8 12ZM2 16C1.45 16 0.979333 15.8043 0.588 15.413C0.196666 15.0217 0.000666667 14.5507 0 14V11H2V14H14V11H16V14C16 14.55 15.8043 15.021 15.413 15.413C15.0217 15.805 14.5507 16.0007 14 16H2Z"
+              fill="#005F6B" />
+          </svg>
+
+
+        </button>
+        <button class="icon-button">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 4H8M11 14H2" stroke="#005F6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M14 17C15.6569 17 17 15.6569 17 14C17 12.3431 15.6569 11 14 11C12.3431 11 11 12.3431 11 14C11 15.6569 12.3431 17 14 17Z"
+              stroke="#005F6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 7C5.65685 7 7 5.65685 7 4C7 2.34315 5.65685 1 4 1C2.34315 1 1 2.34315 1 4C1 5.65685 2.34315 7 4 7Z"
+              stroke="#005F6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div class="search-bar">
+                      <input type="text" placeholder="Search for keyword">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                          <path fill="#262262"
+                              d="m18.031 16.617l4.283 4.282l-1.415 1.415l-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9s9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617m-2.006-.742A6.98 6.98 0 0 0 18 11c0-3.867-3.133-7-7-7s-7 3.133-7 7s3.133 7 7 7a6.98 6.98 0 0 0 4.875-1.975zm-3.847-8.699a2 2 0 1 0 2.646 2.646a4 4 0 1 1-2.646-2.646" />
+                      </svg>
+                  </div>
+      </div>
       <div class="filter-section">
         <button class="advanced-filter-button" id="advancedFilterBtn">
           <span class="button-content">
@@ -321,13 +350,7 @@
         <select class="filter-select" id="experienceFilter">
           <option>Experience</option>
         </select>
-          <div class="search-bar">
-                    <input type="text" placeholder="Search for keyword">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                        <path fill="#262262"
-                            d="m18.031 16.617l4.283 4.282l-1.415 1.415l-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9s9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617m-2.006-.742A6.98 6.98 0 0 0 18 11c0-3.867-3.133-7-7-7s-7 3.133-7 7s3.133 7 7 7a6.98 6.98 0 0 0 4.875-1.975zm-3.847-8.699a2 2 0 1 0 2.646 2.646a4 4 0 1 1-2.646-2.646" />
-                    </svg>
-                </div>
+        </div>
       </div>
       <div class="candidate-table">
       <table id="candidateTable">
@@ -388,18 +411,30 @@
                 <div class="info-group"><span class="info-label">Client Label:</span>Premium</div>
                 <div class="info-group"><span class="info-label">Client Status:</span>Active</div>
                 <div class="button-group">
-                  <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                      viewBox="0 0 16 16">
-                      <path fill="currentColor"
-                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z" />
-                    </svg></button>
+                  <button class="icon-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none" />
+                    <path fill="currentColor"
+                      d="M239.18 97.26A16.38 16.38 0 0 0 224.92 86l-59-4.76l-22.78-55.09a16.36 16.36 0 0 0-30.27 0L90.11 81.23L31.08 86a16.46 16.46 0 0 0-9.37 28.86l45 38.83L53 211.75a16.38 16.38 0 0 0 24.5 17.82l50.5-31.08l50.53 31.08A16.4 16.4 0 0 0 203 211.75l-13.76-58.07l45-38.83a16.43 16.43 0 0 0 4.94-17.59m-15.34 5.47l-48.7 42a8 8 0 0 0-2.56 7.91l14.88 62.8a.37.37 0 0 1-.17.48c-.18.14-.23.11-.38 0l-54.72-33.65a8 8 0 0 0-8.38 0l-54.72 33.67c-.15.09-.19.12-.38 0a.37.37 0 0 1-.17-.48l14.88-62.8a8 8 0 0 0-2.56-7.91l-48.7-42c-.12-.1-.23-.19-.13-.5s.18-.27.33-.29l63.92-5.16a8 8 0 0 0 6.72-4.94l24.62-59.61c.08-.17.11-.25.35-.25s.27.08.35.25L153 91.86a8 8 0 0 0 6.75 4.92l63.92 5.16c.15 0 .24 0 .33.29s0 .4-.16.5" />
+                  </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+                  <rect width="256" height="256" fill="none" />
+                  <path fill="currentColor"
+                    d="M239.18 97.26A16.38 16.38 0 0 0 224.92 86l-59-4.76l-22.78-55.09a16.36 16.36 0 0 0-30.27 0L90.11 81.23L31.08 86a16.46 16.46 0 0 0-9.37 28.86l45 38.83L53 211.75a16.38 16.38 0 0 0 24.5 17.82l50.5-31.08l50.53 31.08A16.4 16.4 0 0 0 203 211.75l-13.76-58.07l45-38.83a16.43 16.43 0 0 0 4.94-17.59m-15.34 5.47l-48.7 42a8 8 0 0 0-2.56 7.91l14.88 62.8a.37.37 0 0 1-.17.48c-.18.14-.23.11-.38 0l-54.72-33.65a8 8 0 0 0-8.38 0l-54.72 33.67c-.15.09-.19.12-.38 0a.37.37 0 0 1-.17-.48l14.88-62.8a8 8 0 0 0-2.56-7.91l-48.7-42c-.12-.1-.23-.19-.13-.5s.18-.27.33-.29l63.92-5.16a8 8 0 0 0 6.72-4.94l24.62-59.61c.08-.17.11-.25.35-.25s.27.08.35.25L153 91.86a8 8 0 0 0 6.75 4.92l63.92 5.16c.15 0 .24 0 .33.29s0 .4-.16.5" />
+                </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256">
+                <rect width="256" height="256" fill="none" />
+                <path fill="currentColor"
+                  d="M239.18 97.26A16.38 16.38 0 0 0 224.92 86l-59-4.76l-22.78-55.09a16.36 16.36 0 0 0-30.27 0L90.11 81.23L31.08 86a16.46 16.46 0 0 0-9.37 28.86l45 38.83L53 211.75a16.38 16.38 0 0 0 24.5 17.82l50.5-31.08l50.53 31.08A16.4 16.4 0 0 0 203 211.75l-13.76-58.07l45-38.83a16.43 16.43 0 0 0 4.94-17.59m-15.34 5.47l-48.7 42a8 8 0 0 0-2.56 7.91l14.88 62.8a.37.37 0 0 1-.17.48c-.18.14-.23.11-.38 0l-54.72-33.65a8 8 0 0 0-8.38 0l-54.72 33.67c-.15.09-.19.12-.38 0a.37.37 0 0 1-.17-.48l14.88-62.8a8 8 0 0 0-2.56-7.91l-48.7-42c-.12-.1-.23-.19-.13-.5s.18-.27.33-.29l63.92-5.16a8 8 0 0 0 6.72-4.94l24.62-59.61c.08-.17.11-.25.35-.25s.27.08.35.25L153 91.86a8 8 0 0 0 6.75 4.92l63.92 5.16c.15 0 .24 0 .33.29s0 .4-.16.5" />
+              </svg></button>
+                
+                  <button class="icon-button"><span>01</span></button>
                   <button class="icon-button assign-client-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
                       height="1em" viewBox="0 0 20 20">
                       <rect width="20" height="20" fill="none" />
                       <path fill="currentColor"
                         d="M9.467 0c3.184 0 5.765 2.566 5.765 5.732a5.7 5.7 0 0 1-2.02 4.358q.405.2.738.403q.716.435 1.49 1.079a.685.685 0 0 1 .086.969a.694.694 0 0 1-.975.086a11 11 0 0 0-1.322-.96a11 11 0 0 0-1.405-.703a5.8 5.8 0 0 1-2.357.5a5.8 5.8 0 0 1-2.58-.605l-.042.02c-1.95.756-3.373 1.874-4.292 3.358c-.922 1.489-1.299 3.153-1.13 5.014a.69.69 0 0 1-.628.746a.69.69 0 0 1-.75-.623c-.195-2.152.249-4.113 1.33-5.858c.95-1.536 2.347-2.73 4.174-3.582a5.7 5.7 0 0 1-1.846-4.202C3.703 2.566 6.283 0 9.467 0m7.401 12.693c.38 0 .688.31.688.691v1.752h1.752a.69.69 0 0 1 .692.689a.69.69 0 0 1-.692.687h-1.752v1.753a.69.69 0 0 1-.688.691a.69.69 0 0 1-.688-.691v-1.753h-1.752a.69.69 0 0 1-.692-.687c0-.38.31-.688.692-.688l1.752-.001v-1.752a.69.69 0 0 1 .688-.691m-7.4-11.317c-2.42 0-4.382 1.95-4.382 4.356s1.962 4.357 4.381 4.357s4.381-1.95 4.381-4.357s-1.961-4.356-4.38-4.356" />
                     </svg></button>
-                  <button class="icon-button graph-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                  <button  class="icon-button graph-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                       viewBox="0 0 100 100">
                       <path fill="currentColor"
                         d="M46.05 60.163H31.923c-.836 0-1.513.677-1.513 1.513V83.61c0 .836.677 1.513 1.513 1.513H46.05c.836 0 1.512-.677 1.512-1.513V61.675c0-.836-.677-1.512-1.512-1.512m22.027-45.285H53.95c-.836 0-1.513.677-1.513 1.513v67.218c0 .836.677 1.513 1.513 1.513h14.127c.836 0 1.513-.677 1.513-1.513V16.391c0-.836-.677-1.513-1.513-1.513m22.14 20.421H76.09c-.836 0-1.513.677-1.513 1.513v46.797c0 .836.677 1.513 1.513 1.513h14.126c.836 0 1.513-.677 1.513-1.513V36.812c0-.835-.677-1.513-1.512-1.513m-66.307 0H9.783c-.836 0-1.513.677-1.513 1.513v46.797c0 .836.677 1.513 1.513 1.513H23.91c.836 0 1.513-.677 1.513-1.513V36.812c0-.835-.677-1.513-1.513-1.513" />
@@ -433,15 +468,16 @@
                   </div>
                   <div class="comments-section">
                     <input type="text" class="comments-input" placeholder="Comments">
-                    <button class="submit-button"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <button class="submit-button" ><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                       <rect width="24" height="24" fill="none" />
                       <path fill="currentColor"
                         d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4zM20 4v13.17L18.83 16H4V4zM6 12h12v2H6zm0-3h12v2H6zm0-3h12v2H6z" />
                     </svg>Save Comment</button>
-                    <!-- <span class="timestamp">12:34 PM</span> -->
+                    <span class="timestamp">ADMIN 1 12:34 PM</span>
                   </div>
                   </td>
-                  </tr>
+                
+                </tr>
         </tbody>
       </table>
       </div>
@@ -890,13 +926,7 @@
         </div>
         <div class="form-group label-input">
           <label for="dueDate">Due Date</label>
-          <input type="text" id="dueDate" placeholder="Choose the Date">
-          <span class="date-picker-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-              <path fill="currentColor"
-                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z" />
-            </svg>
-          </span>
+          <input type="date">
         </div>
         <div class="form-group">
           <button class="confirm-button">Confirm</button>
@@ -939,13 +969,8 @@
         </div>
         <div class="form-group label-input">
           <label for="dueDate">Schedule the Reminder</label>
-          <input type="text" id="dueDate" placeholder="Choose the Date">
-          <span class="date-picker-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-              <path fill="currentColor"
-                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z" />
-            </svg>
-          </span>
+      <input type="date" >
+          
         </div>
         <div class="form-group">
           <button class="confirm-button">Confirm</button>
