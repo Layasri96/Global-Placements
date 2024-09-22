@@ -11,7 +11,45 @@
 </head>
 
 <body>
- 
+    <style>
+        .advanced-filter-content-section .others-section .checkbox-group {
+            margin-bottom: 10px;
+        }
+
+        .advanced-filter-content-section .others-section .checkbox-group label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .advanced-filter-content-section .others-section .checkbox-group input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #008080;
+            border-radius: 3px;
+            margin-right: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .advanced-filter-content-section .others-section .checkbox-group input[type="checkbox"]:checked::before {
+            content: "\2713";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #008080;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .advanced-filter-content-section .others-section .checkbox-group span {
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
     <div class="sidebar-container ">
         <div class="logo-container">
             <img class="logo" src="../../../../Internal-CRM/images/global_placements_logo.png" alt="Global Placements">
@@ -25,7 +63,7 @@
                                     <path fill="currentColor"
                                         d="M13 9V3h8v6zM3 13V3h8v10zm10 8V11h8v10zM3 21v-6h8v6zm2-10h4V5H5zm10 8h4v-6h-4zm0-12h4V5h-4zM5 19h4v-2H5zm4-2" />
                                 </svg><span class="sidebar-nav-item">Dashboard</span></a>
-
+    
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle">
@@ -60,7 +98,7 @@
                                 </li>
                             </ul>
                         </li>
-
+    
                         <li class="dropdown">
                             <a href="../../../../Internal-CRM/employee-crm/pages/database/#" class="dropdown-toggle">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -86,8 +124,8 @@
                                             class="sidebar-nav-item">Rejected</span></a></li>
                             </ul>
                         </li>
-
-
+    
+    
                         <li><a href="../../../../Internal-CRM/employee-crm/pages/submissions/submissions.html"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <rect width="24" height="24" fill="none" />
@@ -97,7 +135,7 @@
                                 <span class="sidebar-nav-item">Submissions</span>
                             </a>
                         </li>
-
+    
                         <li><a href="../../../../Internal-CRM/employee-crm/pages/interviews/interviews.html"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <path fill="currentColor"
@@ -112,7 +150,7 @@
                                 </svg>
                                 </svg><span class="sidebar-nav-item">Post Selection</span></a>
                         </li>
-
+    
                         <li class="dropdown">
                             <a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/#" class="dropdown-toggle">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -128,17 +166,16 @@
                                 </svg>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a
-                                        href="../../../../Internal-CRM/employee-crm/pages/feedbacks/client_feedback.html"><span
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/client_feedback.html"><span
                                             class="sidebar-nav-item">Client Feedback</span></a></li>
                                 <li><a
                                         href="../../../../Internal-CRM/employee-crm/pages/feedbacks/subject_expert_feedback.html"><span
                                             class="sidebar-nav-item">Subject Expert Feedback</span></a>
                                 </li>
-
+    
                             </ul>
                         </li>
-
+    
                         <li><a href="../../../../Internal-CRM/employee-crm/pages/notifications/notifications.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <path fill="currentColor" fill-rule="evenodd"
@@ -167,13 +204,12 @@
                                         class="clr-i-outline clr-i-outline-path-3" />
                                     <path fill="none" d="M0 0h36v36H0z" />
                                 </svg>
-
+    
                                 <span class="sidebar-nav-item">Tasks</span></a></li>
-
-
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/statistics/statistics.html"><svg
-                                    width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+    
+    
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/statistics/statistics.html"><svg width="20"
+                                    height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M2.1875 16.5625V1.875H0.625V16.875C0.69463 17.228 0.884868 17.5457 1.1631 17.7738C1.44134 18.0018 1.79024 18.126 2.15 18.125H19.375V16.5625H2.1875Z"
                                         fill="white" />
@@ -181,7 +217,7 @@
                                         d="M3.9375 10H5.5V14.875H3.9375V10ZM8.0125 5H9.5875V14.875H8.0125V5ZM12.1 7.5H13.6625V14.875H12.1V7.5ZM16.1875 3.125H17.75V14.875H16.1875V3.125Z"
                                         fill="white" />
                                 </svg>
-
+    
                                 <span class="sidebar-nav-item">Statistics</span></a></li>
                         <li>
                             <a href="../../../../Internal-CRM/employee-crm/pages/our_partners/our_partners.html"><svg
@@ -200,22 +236,21 @@
                         <li><a href="../../../../Internal-CRM/employee-crm/pages/global_team/global_team.html"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
                                     <rect width="14" height="14" fill="none" />
-                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round"
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         d="M13.5 10.5v2a1 1 0 0 1-1 1h-2m0-13h2a1 1 0 0 1 1 1v2m-13 0v-2a1 1 0 0 1 1-1h2m0 13h-2a1 1 0 0 1-1-1v-2m6.5-4a2 2 0 1 0 0-4a2 2 0 0 0 0 4m3.803 4.5a3.994 3.994 0 0 0-7.606 0z" />
                                 </svg>
-
+    
                                 <span class="sidebar-nav-item">Global Team</span></a></li>
                         <li><a href="../../../../Internal-CRM/employee-crm/pages/announcements/announcements.html"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <rect width="24" height="24" fill="none" />
-                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
-                                        stroke-linejoin="round" stroke-width="2"
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2"
                                         d="M13 15V7m0 8l5.504 3.145A1 1 0 0 0 20 17.277V4.723a1 1 0 0 0-1.496-.868L13 7m0 8h-3m3-8H7a4 4 0 0 0-4 4v0a4 4 0 0 0 4 4v0m0 0v4.5A1.5 1.5 0 0 0 8.5 21v0a1.5 1.5 0 0 0 1.5-1.5V15m-3 0h3" />
                                 </svg>
-
+    
                                 <span class="sidebar-nav-item">Announcements</span></a></li>
-
+    
                     </ul>
                 </div>
             </div>
@@ -224,7 +259,7 @@
     <div class="container">
         <div class="header">
             <div class="header-title">
-                <h2>Client Feedback</h2>
+                <h2>Reminders</h2>
             </div>
             <div class="header-lastitem">
                 <div class="profilename">
@@ -242,87 +277,89 @@
                 <div class="approvals-filter__container">
                     <!-- Category Filter -->
                     <div class="approvals-filter__group">
-                        <label for="" class="approvals-filter__label">Category</label>
-                            <select class="approvals-filter__select">
-                                <option value="">Nurses</option>
-                                <option>...</option>
-                                <option>...</option>
-                            </select>
+                        <label for="categoryFilter" class="approvals-filter__label">Sort By</label>
+                        <select class="approvals-filter__select">
+                            <option value="">Group Name</option>
+                            <option>...</option>
+                            <option>...</option>
+                        </select>
                     </div>
 
                     <!-- Project Filter -->
                     <div class="approvals-filter__group">
-                        <label for="" class="approvals-filter__label">Project Name</label>
+                        <label class="approvals-filter__label">Organization Name</label>
                         <select class="approvals-filter__select">
-                            <option value="">Choose Project Name</option>
+                            <option value="">Choose the Organization Name</option>
                             <option>...</option>
                             <option>...</option>
                             <option>...</option>
                         </select>
                     </div>
                     <div class="approvals-filter__group">
-                        <label for="" class="approvals-filter__label">Client Name</label>
+                        <label for="projectNameFilter" class="approvals-filter__label">Agent Name</label>
                         <select class="approvals-filter__select">
-                            <option value="">Choose the Client Name</option>
+                            <option value="">Choose the Agent Name</option>
                             <option>...</option>
                             <option>...</option>
                             <option>...</option>
                         </select>
                     </div>
-                    <div class="approvals-filter__group">
-                        <label for="" class="approvals-filter__label">Client Status</label>
-                        <select class="approvals-filter__select">
-                            <option value="">Selected</option>
-                            <option>Rejected</option>
-                            <option>On Hold</option>
-                            <option>Reschedule</option>
-                        </select>
-                    </div>
-                    
-                </div>
 
+
+                    <!-- Approve Button -->
+                </div>
+                <div class="projects-actions">
+                    <button  class="btn-submissions">Notify</button>
+
+                </div>
             </div>
 
             <div class="candidate-table">
                 <table id="candidateTable">
                     <thead>
                         <tr>
-                            
-                            <th>Candidate ID</th>
-                            <th>Name of the Candidate</th>
-                            <th>Contact No</th>
-                            <th>Mail ID</th>
-                            <th>Experience</th>
-                            <th>Department</th>
-                            <th>Client Name</th>
-                            <th>Status</th>
+                            <th><input type="checkbox" id="selectAll"></th>
+                            <th>Group </th>
+                            <th> Agent Name </th>
+                            <th>Name of the Organization</th>
+                            <th>Contact Number</th>
+                            <th>Mail</th>
+                            <th>Location</th>
+                            <th>Submissions</th>
+                            <th>Handled By</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                          
-                            <td>
-                                <img src="https://via.placeholder.com/50" class="candidate-image">
-                                CAND001
-                            </td>
-                            
-                            <td>John Doe</td>
-                            <td>+1 (555) 123-4567</td>
-                            <td>john.doe@example.com</td>
-                            <td>5 years</td>
-                            <td>Dept 01</td>
-                            <td>Mahesh Babu</td>
-                            <td>Selected</td>
-                            <td>
-                                <a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/#"></a>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M13.2696 3.66768C13.5696 3.36772 13.9765 3.19922 14.4008 3.19922C14.825 3.19922 15.2319 3.36772 15.532 3.66768L22.732 10.8677C23.0319 11.1677 23.2004 11.5746 23.2004 11.9989C23.2004 12.4231 23.0319 12.83 22.732 13.1301L15.532 20.3301C15.2302 20.6215 14.8261 20.7828 14.4065 20.7792C13.987 20.7755 13.5857 20.6072 13.2891 20.3106C12.9924 20.0139 12.8241 19.6126 12.8205 19.1931C12.8169 18.7736 12.9781 18.3694 13.2696 18.0677L17.6008 13.5989H2.40078C1.97643 13.5989 1.56947 13.4303 1.26941 13.1302C0.969352 12.8302 0.800781 12.4232 0.800781 11.9989C0.800781 11.5745 0.969352 11.1676 1.26941 10.8675C1.56947 10.5674 1.97643 10.3989 2.40078 10.3989H17.6008L13.2696 5.93008C12.9696 5.63003 12.8011 5.22314 12.8011 4.79888C12.8011 4.37461 12.9696 3.96772 13.2696 3.66768Z"
-                                    fill="#005F6B" />
+                        <td><input type="checkbox"></td>
+                            <td>Group Name</td>
+                            <td><a href="../../../../Internal-CRM/employee-crm/pages/our_partners/agent.html">Agent Name</a></td>
+                            <td>Name Organization</td>
+                            <td>67834990</td>
+                            <td>DD-MM-YYYY </td>
+                            <td>Delhi</td>
+                            <td>900</td>
+                            <td>Admin 1</td>
+                            <td><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2742_13503)">
+                                    <path
+                                        d="M8.56975 23.1412H11.9983M8.72404 3.59833C7.21579 3.95069 5.87126 4.8033 4.9094 6.0173C3.94754 7.2313 3.42501 8.73518 3.4269 10.284V16.284C3.4269 16.966 3.15598 17.6201 2.67374 18.1023C2.19151 18.5846 1.53745 18.8555 0.855469 18.8555H19.7126C19.0306 18.8555 18.3766 18.5846 17.8943 18.1023C17.4121 17.6201 17.1412 16.966 17.1412 16.284V15.4269M17.9983 0.855469V11.1412M12.8555 5.99833H23.1412"
+                                        stroke="#005F6B" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2742_13503">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
                             </svg>
 </td>
+                            
                         </tr>
+                       
+                     
+
+
                     </tbody>
                 </table>
             </div>
@@ -630,43 +667,7 @@
                 alert("Open Date Picker here");
             });
         });
-        let comments = [
-            { text: 'Lorem ipsum dolor sit amet', admin: 'Admin 1', time: '13:56' },
-            { text: 'Lorem ipsum dolor sit amet', admin: 'Admin 1', time: '13:56' },
-            { text: 'Lorem ipsum dolor sit amet', admin: 'Admin 1', time: '13:56' }
-        ];
 
-        function renderComments() {
-            const commentsList = document.getElementById('commentsList');
-            commentsList.innerHTML = '';
-            comments.forEach(comment => {
-                const commentElement = document.createElement('div');
-                commentElement.className = 'comment';
-                commentElement.innerHTML = `
-            <p>${comment.text}</p>
-            <p class="admin">-- ${comment.admin}, ${comment.time}</p>
-        `;
-                commentsList.appendChild(commentElement);
-            });
-        }
-
-        function addComment() {
-            const newCommentInput = document.getElementById('newComment');
-            const commentText = newCommentInput.value.trim();
-            if (commentText) {
-                const newComment = {
-                    text: commentText,
-                    admin: 'Admin 1',
-                    time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-                };
-                comments.push(newComment);
-                renderComments();
-                newCommentInput.value = '';
-            }
-        }
-
-        // Initialize comments
-        renderComments();
     </script>
 </body>
 
