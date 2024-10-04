@@ -11,45 +11,6 @@
 </head>
 
 <body>
-    <style>
-        .advanced-filter-content-section .others-section .checkbox-group {
-            margin-bottom: 10px;
-        }
-
-        .advanced-filter-content-section .others-section .checkbox-group label {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-
-        .advanced-filter-content-section .others-section .checkbox-group input[type="checkbox"] {
-            appearance: none;
-            -webkit-appearance: none;
-            width: 18px;
-            height: 18px;
-            border: 2px solid #008080;
-            border-radius: 3px;
-            margin-right: 10px;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .advanced-filter-content-section .others-section .checkbox-group input[type="checkbox"]:checked::before {
-            content: "\2713";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #008080;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .advanced-filter-content-section .others-section .checkbox-group span {
-            font-size: 14px;
-            color: #333;
-        }
-    </style>
     <div class="sidebar-container ">
         <div class="logo-container">
             <img class="logo" src="../../../../Internal-CRM/images/global_placements_logo.png" alt="Global Placements">
@@ -63,7 +24,7 @@
                                     <path fill="currentColor"
                                         d="M13 9V3h8v6zM3 13V3h8v10zm10 8V11h8v10zM3 21v-6h8v6zm2-10h4V5H5zm10 8h4v-6h-4zm0-12h4V5h-4zM5 19h4v-2H5zm4-2" />
                                 </svg><span class="sidebar-nav-item">Dashboard</span></a>
-    
+
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle">
@@ -98,7 +59,7 @@
                                 </li>
                             </ul>
                         </li>
-    
+
                         <li class="dropdown">
                             <a href="../../../../Internal-CRM/employee-crm/pages/database/#" class="dropdown-toggle">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -122,10 +83,12 @@
                                 </li>
                                 <li><a href="../../../../Internal-CRM/employee-crm/pages/database/rejected.html"><span
                                             class="sidebar-nav-item">Rejected</span></a></li>
+                                <li><a href="../../../../Internal-CRM/employee-crm/pages/database/students-data.html"><span
+                                            class="sidebar-nav-item">Students Data</span></a></li>
                             </ul>
                         </li>
-    
-    
+
+
                         <li><a href="../../../../Internal-CRM/employee-crm/pages/submissions/submissions.html"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <rect width="24" height="24" fill="none" />
@@ -135,7 +98,7 @@
                                 <span class="sidebar-nav-item">Submissions</span>
                             </a>
                         </li>
-    
+
                         <li><a href="../../../../Internal-CRM/employee-crm/pages/interviews/interviews.html"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <path fill="currentColor"
@@ -150,7 +113,7 @@
                                 </svg>
                                 </svg><span class="sidebar-nav-item">Post Selection</span></a>
                         </li>
-    
+
                         <li class="dropdown">
                             <a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/#" class="dropdown-toggle">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
@@ -166,16 +129,17 @@
                                 </svg>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="../../../../Internal-CRM/employee-crm/pages/feedbacks/client_feedback.html"><span
+                                <li><a
+                                        href="../../../../Internal-CRM/employee-crm/pages/feedbacks/client_feedback.html"><span
                                             class="sidebar-nav-item">Client Feedback</span></a></li>
                                 <li><a
                                         href="../../../../Internal-CRM/employee-crm/pages/feedbacks/subject_expert_feedback.html"><span
                                             class="sidebar-nav-item">Subject Expert Feedback</span></a>
                                 </li>
-    
+
                             </ul>
                         </li>
-    
+
                         <li><a href="../../../../Internal-CRM/employee-crm/pages/notifications/notifications.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <path fill="currentColor" fill-rule="evenodd"
@@ -204,12 +168,13 @@
                                         class="clr-i-outline clr-i-outline-path-3" />
                                     <path fill="none" d="M0 0h36v36H0z" />
                                 </svg>
-    
+
                                 <span class="sidebar-nav-item">Tasks</span></a></li>
-    
-    
-                        <li><a href="../../../../Internal-CRM/employee-crm/pages/statistics/statistics.html"><svg width="20"
-                                    height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+
+                        <li><a href="../../../../Internal-CRM/employee-crm/pages/statistics/statistics.html"><svg
+                                    width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M2.1875 16.5625V1.875H0.625V16.875C0.69463 17.228 0.884868 17.5457 1.1631 17.7738C1.44134 18.0018 1.79024 18.126 2.15 18.125H19.375V16.5625H2.1875Z"
                                         fill="white" />
@@ -217,7 +182,7 @@
                                         d="M3.9375 10H5.5V14.875H3.9375V10ZM8.0125 5H9.5875V14.875H8.0125V5ZM12.1 7.5H13.6625V14.875H12.1V7.5ZM16.1875 3.125H17.75V14.875H16.1875V3.125Z"
                                         fill="white" />
                                 </svg>
-    
+
                                 <span class="sidebar-nav-item">Statistics</span></a></li>
                         <li>
                             <a href="../../../../Internal-CRM/employee-crm/pages/our_partners/our_partners.html"><svg
@@ -236,21 +201,22 @@
                         <li><a href="../../../../Internal-CRM/employee-crm/pages/global_team/global_team.html"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
                                     <rect width="14" height="14" fill="none" />
-                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round"
                                         d="M13.5 10.5v2a1 1 0 0 1-1 1h-2m0-13h2a1 1 0 0 1 1 1v2m-13 0v-2a1 1 0 0 1 1-1h2m0 13h-2a1 1 0 0 1-1-1v-2m6.5-4a2 2 0 1 0 0-4a2 2 0 0 0 0 4m3.803 4.5a3.994 3.994 0 0 0-7.606 0z" />
                                 </svg>
-    
+
                                 <span class="sidebar-nav-item">Global Team</span></a></li>
                         <li><a href="../../../../Internal-CRM/employee-crm/pages/announcements/announcements.html"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <rect width="24" height="24" fill="none" />
-                                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2"
+                                    <path fill="none" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
                                         d="M13 15V7m0 8l5.504 3.145A1 1 0 0 0 20 17.277V4.723a1 1 0 0 0-1.496-.868L13 7m0 8h-3m3-8H7a4 4 0 0 0-4 4v0a4 4 0 0 0 4 4v0m0 0v4.5A1.5 1.5 0 0 0 8.5 21v0a1.5 1.5 0 0 0 1.5-1.5V15m-3 0h3" />
                                 </svg>
-    
+
                                 <span class="sidebar-nav-item">Announcements</span></a></li>
-    
+
                     </ul>
                 </div>
             </div>
@@ -259,7 +225,7 @@
     <div class="container">
         <div class="header">
             <div class="header-title">
-                <h2>Reminders</h2>
+                <h2>Our Partners</h2>
             </div>
             <div class="header-lastitem">
                 <div class="profilename">
@@ -309,7 +275,7 @@
                     <!-- Approve Button -->
                 </div>
                 <div class="projects-actions">
-                    <button  class="btn-submissions">Notify</button>
+                    <button class="btn-submissions notify-group-button">Notify</button>
 
                 </div>
             </div>
@@ -332,32 +298,35 @@
                     </thead>
                     <tbody>
                         <tr>
-                        <td><input type="checkbox"></td>
+                            <td><input type="checkbox"></td>
                             <td>Group Name</td>
-                            <td><a href="../../../../Internal-CRM/employee-crm/pages/our_partners/agent.html">Agent Name</a></td>
+                            <td><a href="../../../../Internal-CRM/employee-crm/pages/our_partners/agent.html">Agent
+                                    Name</a></td>
                             <td>Name Organization</td>
                             <td>67834990</td>
                             <td>DD-MM-YYYY </td>
                             <td>Delhi</td>
                             <td>900</td>
                             <td>Admin 1</td>
-                            <td><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2742_13503)">
-                                    <path
-                                        d="M8.56975 23.1412H11.9983M8.72404 3.59833C7.21579 3.95069 5.87126 4.8033 4.9094 6.0173C3.94754 7.2313 3.42501 8.73518 3.4269 10.284V16.284C3.4269 16.966 3.15598 17.6201 2.67374 18.1023C2.19151 18.5846 1.53745 18.8555 0.855469 18.8555H19.7126C19.0306 18.8555 18.3766 18.5846 17.8943 18.1023C17.4121 17.6201 17.1412 16.966 17.1412 16.284V15.4269M17.9983 0.855469V11.1412M12.8555 5.99833H23.1412"
-                                        stroke="#005F6B" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_2742_13503">
-                                        <rect width="24" height="24" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-</td>
-                            
+                            <td><svg class="notify-agent-button" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2742_13503)">
+                                        <path
+                                            d="M8.56975 23.1412H11.9983M8.72404 3.59833C7.21579 3.95069 5.87126 4.8033 4.9094 6.0173C3.94754 7.2313 3.42501 8.73518 3.4269 10.284V16.284C3.4269 16.966 3.15598 17.6201 2.67374 18.1023C2.19151 18.5846 1.53745 18.8555 0.855469 18.8555H19.7126C19.0306 18.8555 18.3766 18.5846 17.8943 18.1023C17.4121 17.6201 17.1412 16.966 17.1412 16.284V15.4269M17.9983 0.855469V11.1412M12.8555 5.99833H23.1412"
+                                            stroke="#005F6B" stroke-width="1.71429" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2742_13503">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </td>
+
                         </tr>
-                       
-                     
+
+
 
 
                     </tbody>
@@ -388,20 +357,13 @@
     </div>
     </div>
     </div>
-    <div class="popup-overlay" id="reschedulePop">
-        <div class="popup-content reschedule-content">
+    <div class="popup-overlay" id="notifyAgentPopOverlay">
+        <div class="popup-content ">
             <div class="popup-header">
                 <h2 class="popup-title">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2C7.522 2 3.774 4.943 2.5 9H5"
-                            stroke="#005F6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M12 8V12L14 14M2 12C2 12.3367 2.015 12.67 2.045 13M9 22C8.65988 21.8873 8.32607 21.7565 8 21.608M3.21 17C3.01636 16.6255 2.84441 16.2402 2.695 15.846M4.831 19.306C5.13767 19.636 5.46333 19.9437 5.808 20.229"
-                            stroke="#005F6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    RESCHEDULE
+                    NOTIFY AGENT
                 </h2>
-                <button class="popup-close" id="rescheduleClosePopup">
+                <button class="popup-close" id="notifyAgentClosePopup">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em">
                         <path fill="currentColor"
                             d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z" />
@@ -411,262 +373,106 @@
 
             <div class="popup-body">
                 <div class="form-group label-input">
-                    <label for="candidateName">Name of the Candidate</label>
-                    <input type="text" id="candidateName" placeholder="Name">
+                    <label for="">Agent/Organization Name</label>
+                    <input type="text" id="" placeholder="Group Name">
                 </div>
-
                 <div class="form-group label-input">
-                    <label for="taskAssignee">Assign this task to</label>
-                    <select id="taskAssignee">
-                        <option>Choose the Employees</option>
-                        <!-- Add other options here -->
-                    </select>
+                    <label for="">Enter the Message</label>
+                    <input type="text" id="" placeholder="">
                 </div>
-
-                <div class="form-group label-input">
-                    <label for="taskDescription">Task Description</label>
-                    <input type="text" id="taskDescription" placeholder="Status">
-                </div>
-
-                <div class="form-group label-input">
-                    <label for="dueDate">Due Date</label>
-                    <input type="text" id="dueDate" placeholder="Choose the Date">
-                    <span class="date-picker-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z" />
-                        </svg>
-                    </span>
-                </div>
-
-                <div class="form-group label-input">
-                    <label for="rescheduleDate">Reschedule Date</label>
-                    <input type="text" id="rescheduleDate" placeholder="Choose the Date">
-                    <span class="date-picker-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z" />
-                        </svg>
-                    </span>
-                </div>
-
                 <div class="form-group">
-                    <button class="confirm-button">Confirm</button>
+                    <button class="confirm-button">Send</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="popup-overlay" id="addNewTaskPopupOverlay">
-        <div class="popup-content">
+    <div class="popup-overlay" id="notifyGroupPopOverlay">
+        <div class="popup-content ">
             <div class="popup-header">
                 <h2 class="popup-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-                    </svg>
-                    ADD NEW TASK
+                    NOTIFY GROUP
                 </h2>
-                <button class="popup-close" id="closeAddNewTaskPopup">&#10005;</button>
+                <button class="popup-close" id="notifyGroupClosePopup">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em">
+                        <path fill="currentColor"
+                            d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z" />
+                    </svg>
+                </button>
             </div>
+
             <div class="popup-body">
-                <div class="form-group">
-                    <label for="candidateName">Name of the Candidate</label>
-                    <input type="text" id="candidateName" placeholder="Name">
+                <div class="form-group label-input">
+                    <label for="">Group Name</label>
+                    <input type="text" id="" placeholder="Group Name">
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Enter the Message</label>
+                    <input type="text" id="" placeholder="">
                 </div>
                 <div class="form-group">
-                    <label for="taskAssignee">Assign this task to</label>
-                    <select id="taskAssignee">
-                        <option value="">Choose the Employees</option>
-                        <!-- Add other options here -->
-                    </select>
+                    <button class="confirm-button">Send</button>
                 </div>
-                <div class="form-group">
-                    <label for="taskDescription">Task Description</label>
-                    <textarea id="taskDescription" placeholder="Status"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="dueDate">Due Date</label>
-                    <input type="text" id="dueDate" placeholder="Choose the Date" readonly>
-                    <span class="date-picker-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5z" />
-                        </svg>
-                    </span>
-                </div>
-                <button class="confirm-button">Confirm</button>
             </div>
         </div>
     </div>
+
+  
 
     <script src="../../../../Internal-CRM/scripts.js"></script>
     <script>
         function setupPopups() {
-            const commentsPopup = document.getElementById('commentsPopupOverlay');
-            const commentsCloseButton = document.getElementById('closeCommentsPopup');
-            const addNewTaskPopup = document.getElementById('addNewTaskPopupOverlay');
-            const closeAddNewTaskPopup = document.getElementById('closeAddNewTaskPopup');
-            const confirmButton = addNewTaskPopup.querySelector('.confirm-button');
+            const notifyGroupPop = document.getElementById('notifyGroupPopOverlay');
+            const closeNotifyGroupPopupButton = document.getElementById('notifyGroupClosePopup');
+            const notifyAgentPop = document.getElementById('notifyAgentPopOverlay');
+            const closeNotifyAgentPopupButton = document.getElementById('notifyAgentClosePopup');
+    
 
-            if (commentsPopup && commentsCloseButton) {
+            if (notifyGroupPop && closeNotifyGroupPopupButton) {
                 // Use event delegation for opening the comments popup
                 document.addEventListener('click', function (event) {
-                    if (event.target.closest('.comments-button')) {
-                        commentsPopup.style.display = 'block';
+                    if (event.target.closest('.notify-group-button')) {
+                        notifyGroupPop.style.display = 'block';
                     }
                 });
 
                 // Close button functionality
-                commentsCloseButton.addEventListener('click', () => commentsPopup.style.display = 'none');
+                closeNotifyGroupPopupButton.addEventListener('click', () => notifyGroupPop.style.display = 'none');
 
                 // Close popup when clicking outside
-                commentsPopup.addEventListener('click', (event) => {
-                    if (event.target === commentsPopup) commentsPopup.style.display = 'none';
+                notifyGroupPop.addEventListener('click', (event) => {
+                    if (event.target === notifyGroupPop) notifyGroupPop.style.display = 'none';
                 });
 
-                // Close popup when clicking the "Close" button in the footer
-                const closeButton = commentsPopup.querySelector('.close-button');
-                if (closeButton) {
-                    closeButton.addEventListener('click', () => commentsPopup.style.display = 'none');
-                }
+
             } else {
-                console.error('Comments popup elements not found');
+                console.error('Notify Group popup elements not found');
             }
-            if (addNewTaskPopup && closeAddNewTaskPopup) {
-                // Use event delegation for opening the add new task popup
+            if (notifyAgentPop && closeNotifyAgentPopupButton) {
+                // Use event delegation for opening the comments popup
                 document.addEventListener('click', function (event) {
-                    if (event.target.closest('.add-task-button')) {
-                        addNewTaskPopup.style.display = 'block';
+                    if (event.target.closest('.notify-agent-button')) {
+                        notifyAgentPop.style.display = 'block';
                     }
                 });
 
                 // Close button functionality
-                closeAddNewTaskPopup.addEventListener('click', () => addNewTaskPopup.style.display = 'none');
+                closeNotifyAgentPopupButton.addEventListener('click', () => notifyAgentPop.style.display = 'none');
 
                 // Close popup when clicking outside
-                addNewTaskPopup.addEventListener('click', (event) => {
-                    if (event.target === addNewTaskPopup) addNewTaskPopup.style.display = 'none';
+                notifyAgentPop.addEventListener('click', (event) => {
+                    if (event.target === notifyAgentPop) notifyAgentPop.style.display = 'none';
                 });
 
-                // Close popup when clicking the "Close" button in the footer
-                const footerCloseButton = addNewTaskPopup.querySelector('.footer-close-button');
-                if (footerCloseButton) {
-                    footerCloseButton.addEventListener('click', () => addNewTaskPopup.style.display = 'none');
-                }
+
             } else {
-                console.error('Add new task popup elements not found');
+                console.error('Notify Agent popup elements not found');
             }
+         
 
         }
 
         // Call the setup function when the DOM is fully loaded
         document.addEventListener('DOMContentLoaded', setupPopups);
-        document.addEventListener('DOMContentLoaded', () => {
-            const reschedulePop = document.getElementById('reschedulePop');
-            const rescheduleClosePopup = document.getElementById('rescheduleClosePopup');
-            const confirmButton = document.querySelector('.confirm-button');
-
-            // Open Popup - Assuming there's a button with an ID 'openReschedulePopup'
-            document.getElementById('openReschedulePopup').addEventListener('click', () => {
-                reschedulePop.style.display = 'block';
-            });
-
-            // Close Popup functionality
-            rescheduleClosePopup.addEventListener('click', () => {
-                reschedulePop.style.display = 'none';
-            });
-
-            // Close popup when clicking outside of the popup content
-            reschedulePop.addEventListener('click', (event) => {
-                if (event.target === reschedulePop) {
-                    reschedulePop.style.display = 'none';
-                }
-            });
-
-            // Confirm button action
-            confirmButton.addEventListener('click', (event) => {
-                event.preventDefault();
-                // Process the form here
-                console.log('Processing form data...');
-                // Optionally, close the popup after processing
-                reschedulePop.style.display = 'none';
-            });
-
-            // Optional: Implement date pickers for date inputs
-            const dateInputs = reschedulePop.querySelectorAll('input[type="text"]');
-            dateInputs.forEach(input => {
-                // Assuming you are using a date picker library like Pikaday or flatpickr
-                new Pikaday({ field: input });
-            });
-        });
-
-        // Remember to include the library for the date picker in your HTML if you are using one.
-        document.addEventListener('DOMContentLoaded', () => {
-            const addNewTaskPopupOverlay = document.getElementById('addNewTaskPopupOverlay');
-            const closeAddNewTaskPopup = document.getElementById('closeAddNewTaskPopup');
-            const confirmButton = document.querySelector('.confirm-button');
-
-            // Function to open the popup
-            function openPopup() {
-                addNewTaskPopupOverlay.style.display = 'block';
-            }
-
-            // Function to close the popup
-            function closePopup() {
-                addNewTaskPopupOverlay.style.display = 'none';
-            }
-
-            // Close popup when the close button is clicked
-            closeAddNewTaskPopup.addEventListener('click', () => {
-                closePopup();
-            });
-
-            // Optional: Close popup when clicking outside the popup content
-            addNewTaskPopupOverlay.addEventListener('click', (event) => {
-                if (event.target === addNewTaskPopupOverlay) {
-                    closePopup();
-                }
-            });
-
-            // Handle the form submission
-            confirmButton.addEventListener('click', (event) => {
-                event.preventDefault(); // Prevents the default form submission
-
-                // Get the form data
-                const candidateName = document.getElementById('candidateName').value;
-                const taskAssignee = document.getElementById('taskAssignee').value;
-                const taskDescription = document.getElementById('taskDescription').value;
-                const dueDate = document.getElementById('dueDate').value;
-
-                // Simple validation (You can expand this)
-                if (!candidateName || !taskAssignee || !taskDescription || !dueDate) {
-                    alert('Please fill out all fields');
-                    return;
-                }
-
-                // Process the form data (Example: you can send the data to the server or display it)
-                console.log({
-                    candidateName,
-                    taskAssignee,
-                    taskDescription,
-                    dueDate
-                });
-
-                // After processing, close the popup
-                closePopup();
-            });
-
-            // Add an event listener to open the popup, assuming you have a button somewhere
-            document.querySelector('.open-popup-button').addEventListener('click', openPopup);
-
-            // Handle date picker (assuming you're using a date picker library)
-            const datePickerIcon = document.querySelector('.date-picker-icon');
-            datePickerIcon.addEventListener('click', () => {
-                // Assuming you have a date picker setup
-                // Example with flatpickr: flatpickr('#dueDate', {});
-                alert("Open Date Picker here");
-            });
-        });
 
     </script>
 </body>
