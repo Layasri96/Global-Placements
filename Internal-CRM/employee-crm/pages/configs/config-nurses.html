@@ -718,6 +718,46 @@
             </div>
         </div>
  </div>
+ <div class="popup-overlay" id="standardProcedurePopupOverlay
+        <div class="popup-content ">
+            <div class="popup-header">
+                <h2 class="popup-title">
+                    STANDARD PROCEDURE
+                </h2>
+                <button class="popup-close" id="closeStandardProcedurePopup">&#10005;</button>
+            </div>
+            <div class="popup-body ">
+                <div class="form-group label-input">
+                    <label for="">Category Name</label>
+                     <select id="">
+                         <option value="">Nurses</option>
+                       </select>
+                    </div>
+
+                 <div class="form-group label-input">
+                     <label for="">Choose the Country</label>
+                     <select id="">
+                         <option value="">Nurses</option>
+                       </select>
+                </div>
+               
+                <div class="form-group label-input">
+                    <label for="">Add a Client</label>
+                  <input type="text" placeholder="Carla Cronin">
+                </div>
+                <div class="form-group label-input">
+                    <label for="">Add a Client Label</label>
+                  <input type="text" placeholder="Carla Cronin">
+                </div>
+                <div class="form-group">
+                  <p class="extra-add"> + Add a Standard Procedure</p>
+                </div>
+                <div class="form-group">
+                    <button class="confirm-button">Add</button>
+                </div>
+            </div>
+        </div>
+ </div>
  <div class="popup-overlay" id="addNewProjectPopupOverlay">
         <div class="popup-content ">
             <div class="popup-header">
@@ -947,6 +987,8 @@
         const addNewCountryCloseButton = document.getElementById('closeAddNewCountryPopup');
         const addNewClientPopup = document.getElementById('addNewClientPopupOverlay');
 const addNewClientCloseButton = document.getElementById('closeAddNewClientPopup');
+const standardProcedurePopupOverlay = document.getElementById('standardProcedurePopupOverlay');
+const closeStandardProcedurePopup = document.getElementById('closeStandardProcedurePopup');
 const addNewDelegatePopup = document.getElementById('addNewDelegatePopupOverlay');
 const addNewDelegateCloseButton = document.getElementById('closeAddNewDelegatePopup');
 const addNewProjectPopup = document.getElementById('addNewProjectPopupOverlay');
@@ -992,6 +1034,21 @@ const closeNewQualificationPopup = document.getElementById('closeNewQualificatio
     console.error('Add new client popup elements not found');
 }
 
+if (standardProcedurePopupOverlay && closeStandardProcedurePopup) {
+    // Use event delegation for standard procedure popup buttons
+    document.addEventListener('click', function (event) {
+        if (event.target.closest('.add-new-project-button')) {
+            standardProcedurePopupOverlay.style.display = 'block';
+        }
+    });
+
+    closeStandardProcedurePopup.addEventListener('click', () => standardProcedurePopupOverlay.style.display = 'none');
+    standardProcedurePopupOverlay.addEventListener('click', (event) => {
+        if (event.target === standardProcedurePopupOverlay) standardProcedurePopupOverlay.style.display = 'none';
+    });
+} else {
+    console.error('Standard procedure popup elements not found');
+}
 if (addNewDelegatePopup && addNewDelegateCloseButton) {
     // Use event delegation for add new delegate buttons
     document.addEventListener('click', function (event) {
