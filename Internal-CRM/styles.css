@@ -324,6 +324,7 @@ h3 {
     justify-content: space-between;
     width: auto;
     justify-content: flex-end;
+    max-width:1200px;
 }
 
 .marquee-container {
@@ -1005,7 +1006,7 @@ h3 {
 }
 
 .dashboard-icon:hover {
-  color: #007bff;
+  color: #005f6b;
 }
 
 .dashboard-card-details {
@@ -1361,11 +1362,73 @@ h3 {
     margin-right: 0.5rem;
 }
 
-.clients {
+.dashboard-clients {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
+}
+.dashboard-compare-projects {
+    width: 100%;
+    overflow-x: auto;
+    font-family: Arial, sans-serif;
+}
+.section-header {
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #f5f5f5;
+    text-align: left;
+    padding: 12px 16px;
+    border-top: 2px solid #e0e0e0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.comparison-table thead th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+    text-align: center;
+}
+
+.add-project {
+    color: #00695c;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.comparison-table tbody td:first-child {
+    font-weight: 500;
+}
+
+.comparison-table tbody td {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .dashboard-compare-projects {
+        overflow-x: auto;
+    }
+
+    .comparison-table th, .comparison-table td {
+        padding: 10px;
+    }
 }
 
 .client-name {
@@ -1522,6 +1585,7 @@ h3 {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     margin: 10px 0px 20px;
     background-color: white;
+    width:100%;
 }
 
 
@@ -2211,8 +2275,7 @@ input[type="radio"] {
 }
 
 .submissions.candidate-table {
-    min-width: 1240px;
-    width: 100%;
+    /* min-width: 1240px; */
 }
 
 #candidateSubmissionTable {
@@ -2475,7 +2538,7 @@ input[type="radio"] {
     display: block;
     margin: 10px auto 0;
     padding: 5px 15px;
-    background-color: #007bff;
+    background-color: #005f6b;
     color: white;
     border: none;
     border-radius: 4px;
@@ -2791,13 +2854,15 @@ input[type="radio"] {
 
 
 /* Profile page */
-
+.main-profile-section{
+    display:grid;
+    grid-template-columns: 200px 700px 250px;
+    gap: 1rem; 
+    width:100%;/* Optional: Add space between the columns */
+}
 .profile {
     display: flex;
-    flex-direction: row;
-    position: relative;
-    left: 220px;
-    max-width: 650px;
+    flex-direction: row; 
     margin: 25px 0px 0px 0px;
 }
 
@@ -2815,14 +2880,14 @@ input[type="radio"] {
 }
 
 .quick-links {
-    width: 200px;
-    padding: 20px;
+  
+    position: relative;
+    padding: 10px;
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid #004957;
-    height: auto;
-    position: fixed;
-    top: 100px;
+    height: fit-content;
+        margin: 25px 0px 0px 0px;
 }
 
 .quick-links h2 {
@@ -2838,6 +2903,7 @@ input[type="radio"] {
     font-weight: 500;
     cursor: pointer;
     margin-left: 18px;
+    
 }
 
 .quick-links a {
@@ -2850,14 +2916,13 @@ section {
 }
 
 .candidate-profile-card {
-    width: 300px;
-    background-color: #fff;
+
+
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    right: 0;
-    top: 100px;
+
+        margin: 25px 0px 0px 0px;
 }
 
 .profile-header {
@@ -2881,11 +2946,6 @@ section {
     left: 10px;
 }
 
-.progress-ring {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
 .candidate-name {
     color: #008080;
@@ -4442,7 +4502,7 @@ input:focus+.slider {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    z-index: 100;
+    z-index: 11000;
 }
 
 .profile-dropdown p {
@@ -4514,4 +4574,497 @@ input:focus+.slider {
 .radiogroup {
     display: flex;
     flex-direction: row;
+}
+
+  
+
+      
+    .statistics-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .parent-tabs {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .parent-tab {
+        padding: 12px 24px;
+        background: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .parent-tab:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .parent-tab.active {
+        background: #00B5A5;
+        color: white;
+        box-shadow: 0 4px 12px rgba(0, 181, 165, 0.2);
+    }
+
+    .child-tabs {
+     
+        gap: 15px;
+   margin-bottom: 20px;
+    }
+
+    .child-tab {
+        padding: 10px 20px;
+        background: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .child-tab:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .child-tab.active {
+        background: #00A7CC;
+        color: white;
+        box-shadow: 0 4px 12px rgba(0, 167, 204, 0.2);
+    }
+
+    /* Content Display */
+    .parent-content {
+        display: none;
+    }
+
+    .parent-content.active {
+        display: block;
+    }
+
+    .child-tabs.active {
+        display: flex;
+    }
+
+    .child-content {
+        display: none;
+    }
+
+    .child-content.active {
+        display: block;
+    }
+
+
+   /* Grid Layout for Chart Boxes */
+    .charts-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .chart-box {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+
+    .chart-box:hover {
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .chart-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #333;
+        text-align: center;
+    }
+
+    .pie-container {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .pie-container svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .legend {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 15px;
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+    }
+
+    .legend-color {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+.statistics-candidate-container {
+  text-align: center;
+
+  max-width: 1200px;
+margin-bottom: 20px;
+}
+
+.statistics-candidate-search-section {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.statistics-candidate-search-input {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.statistics-candidate-show-button {
+  padding: 10px 20px;
+  background-color: #005f6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.statistics-candidate-table-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 2px solid #005f6b;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.statistics-candidate-table-wrapper {
+  overflow-x: auto;
+  display: flex;
+  width: 100%;
+}
+
+
+
+.statistics-candidate-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 800px; /* Keeps horizontal scroll if content is too wide */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.statistics-candidate-table th, 
+.statistics-candidate-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    white-space: nowrap; /* Prevents content from wrapping */
+}
+
+.statistics-candidate-table th {
+    background-color: #005f6b;
+    color: #fff;
+    font-weight: bold;
+    position: sticky;
+    top: 0; /* Keeps header visible when scrolling */
+    z-index: 2;
+    font-size: 16px;
+}
+
+.statistics-candidate-table td {
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9; /* Light background for readability */
+}
+
+.statistics-candidate-table tr:nth-child(even) td {
+    background-color: #f1f5f9; /* Alternating row color */
+}
+
+.statistics-candidate-table tr:hover td {
+    background-color: #eaf4ff; /* Light blue on hover for clarity */
+}
+
+.statistics-candidate-table th:first-child,
+.statistics-candidate-table td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 1;
+    font-weight: bold;
+}
+
+/* Add some spacing between rows */
+.statistics-candidate-table th,
+.statistics-candidate-table td {
+    padding: 12px 16px;
+}
+
+/* Scroll buttons styling */
+.statistics-candidate-scroll-button {
+    padding: 10px;
+    background-color: #005f6b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.statistics-candidate-scroll-button:hover {
+    background-color: #0056b3;
+}
+
+.statistics-candidate-scroll-left {
+    position: absolute;
+    left: 10px;
+}
+
+.statistics-candidate-scroll-right {
+    position: absolute;
+    right: 10px;
+}
+
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 0.5s ease forwards;
+    }
+
+    @media (max-width: 1024px) {
+        .charts-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .charts-container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+   
+.statistics-geochart-container {
+    
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.statistics-geochart-container .dropdown-container {
+    margin-bottom: 20px;
+}
+
+.statistics-geochart-container .dropdown {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+#geoChart {
+    width: 100%;
+    height: 100%;
+}
+.statistics-healthcare-candidate-container {
+   
+    margin: 0 auto;
+    background-color: #f9f9fb;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+.statistics-healthcare-candidate-title {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.statistics-healthcare-candidate-filter-bar {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.statistics-healthcare-candidate-dropdown {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.statistics-healthcare-candidate-chart-title {
+    font-size: 1.5em;
+    color: #007bff;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.statistics-healthcare-candidate-charts-section {
+    margin-top: 1rem;
+}
+
+.statistics-healthcare-candidate-chart-row {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.statistics-healthcare-candidate-name {
+    width: 20%;
+    font-weight: bold;
+    color: #333;
+    padding-right: 10px;
+}
+
+.statistics-healthcare-candidate-bar-chart {
+    width: 75%;
+}
+
+.statistics-healthcare-candidate-legend {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.statistics-healthcare-candidate-legend-color {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 3px;
+}
+
+.attended {
+    background-color: #00B5A5;
+}
+
+.not-attended {
+    background-color: #E1E7EB;
+}
+.statistics-candidate-title {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.statistics-candidate-filter-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.statistics-candidate-filter-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.statistics-candidate-filter-group label {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 0.2rem;
+}
+
+.statistics-candidate-dropdown,
+.statistics-candidate-date-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 1em;
+}
+
+.statistics-candidate-date-input {
+    width: 120px;
+}
+
+.date-range {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.statistics-candidate-show-button {
+    padding: 0.6rem 1.5rem;
+    background-color: #006666;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.statistics-candidate-show-button:hover {
+    background-color: #004d4d;
 }
