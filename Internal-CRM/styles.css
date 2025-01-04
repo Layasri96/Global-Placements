@@ -314,10 +314,8 @@ h3 {
 
 .main-content-global-database {
     position: relative;
-    /* margin: 10px auto; */
     border-radius: 10px;
     padding: 5px 5px 20px;
-    /* box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -537,6 +535,34 @@ h3 {
   border: 1px solid #c7c7c7;
   border-radius: 6px;
 }
+.attendance-total-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-right: 5px;
+  padding: 4px 8px;
+  width: 100px;
+  height: 65px;
+  /* Strokes */
+  border: 1px solid #c7c7c7;
+  border-radius: 6px;
+}
+.attendance-day-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-right: 5px;
+  padding: 4px 8px;
+  width: 80px;
+  height: 65px;
+  /* Strokes */
+  border: 1px solid #c7c7c7;
+  border-radius: 6px;
+}
 
 .calendar-cards {
   /* border: 2px solid darkblue; */
@@ -549,8 +575,15 @@ h3 {
 .day-card:last-child {
   margin-right: 0;
 }
+.attendance-day-card:last-child {
+  margin-right: 0;
+}
 
 .day-card:hover {
+  background-color: #e2e8f0;
+  cursor: pointer;
+}
+.attendance-day-card:hover {
   background-color: #e2e8f0;
   cursor: pointer;
 }
@@ -569,8 +602,13 @@ h3 {
 .day {
   font-size: 8px;
   color: #005f6b;
+  margin-bottom: 2px;
 }
-
+.presentees{
+   font-size: 14px;
+  font-weight: bold;
+  color: #2d3748; 
+}
 .current-day {
   background-color: #edf2f7;
   border: 2px solid #4a5568;
@@ -1821,7 +1859,10 @@ h3 {
 .form-group {
     margin-bottom: 10px;
 }
-
+.form-dates {
+    display: flex;
+    gap: 10px;
+}
 .advanced-filter-content .form-group input[type="date"],
 .form-group select {
     width: calc(50% - 5px);
@@ -2018,6 +2059,8 @@ input[type="radio"] {
     padding: 15px;
     border-top: 1px solid #eee;
     background-color: #fafafa;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #000000;
 }
 
 .additional-info-row {
@@ -2115,16 +2158,18 @@ input[type="radio"] {
 
 .submissions.base-filters {
     display: flex;
+    flex-wrap: wrap; /* Ensure wrapping on smaller screens */
     background-color: white;
     color: #333;
-    padding: 5px;
+    padding: 10px;
     width: 100%;
     border-radius: 8px;
-    gap: 10px;
+    gap: 15px; /* Increased gap for better spacing */
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Even distribution */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 .submissions-filter-select {
     padding: 8px;
@@ -2298,7 +2343,6 @@ input[type="radio"] {
 #candidateSubmissionTable td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #e0e0e0;
 }
 
 #candidateSubmissionTable th {
@@ -3084,6 +3128,11 @@ section {
     border-radius: 8px;
     /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
+.form-group-container{
+ background-color: #ffffff;
+    width: 100%;
+    border-radius: 8px;
+}
 
 .form-grid {
     display: grid;
@@ -3103,6 +3152,11 @@ section {
     color: #767676;
     font-size: 14px;
 }
+.form-sections .full-width {
+    grid-column: 1 / -1;
+    color: #767676;
+    font-size: 14px;
+}
 
 .full-width-flex {
     display: flex;
@@ -3117,7 +3171,7 @@ section {
 
 .profile label {
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: 500;
     color: #000000;
 }
 
@@ -3174,6 +3228,23 @@ select:focus {
     border-color: #006b77;
     outline: none;
 }
+.label-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.add-more {
+    font-size: 14px;
+    color: #005f6b; /* Adjust color as needed */
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.add-more:hover {
+    text-decoration: underline;
+}
 
 #select {
     padding: 8px;
@@ -3187,9 +3258,18 @@ select:focus {
 
 .gender-option,
 .marital-status-options,
-.measurement-options {
+.measurement-options,
+.option-button,
+.status-option,
+.measure-option {
     display: flex;
     gap: 5px;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .form-row {
@@ -3225,12 +3305,23 @@ select:focus {
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
 }
-
+.measure-option{
+    width:70px;
+}
+.gender-option.active,
+.status-option.active,
+.measure-option.active,
+.option-button.active {
+    background-color: #005f6b;
+    color: white;
+    border-color: #005f6b;
+}
 .gender-option:hover,
 .status-option:hover,
-.measure-option:hover {
-    background-color: #e6e6e6;
-    border-color: #005f6b;
+.measure-option:hover,
+.option-button.active {
+   background-color: rgba(0, 95, 107, 0.1);
+    color: #005f6b;
 }
 
 .soft-skills-rating {
@@ -3400,15 +3491,61 @@ select:focus {
         padding: 3px 6px;
     }
 }
+  .project-history-table-container {
+        width: 100%;
+        max-width: 1000px;
+        background: #ffffff;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+    }
 
-.option-button {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-}
+    .project-history-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .project-history-table th, 
+    .project-history-table td {
+        padding: 15px 20px;
+        text-align: left;
+    }
+
+    .project-history-table thead {
+        background-color: #005f6b;
+        color: #ffffff;
+    }
+
+    .project-history-table th {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .project-history-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .project-history-table tbody tr:hover {
+        background-color: #e0f4f6;
+        cursor: pointer;
+    }
+
+    .project-history-table td {
+        font-size: 14px;
+        color: #333;
+    }
+
+        .project-history-table td:first-child {
+        font-weight: bold;
+        color: #005f6b;
+    }
+
+    .project-history-table tbody tr {
+        transition: background-color 0.3s ease;
+    }
+    
 
 .scores-group {
     display: flex;
@@ -3467,6 +3604,37 @@ select:focus {
     .date-inputs {
         flex-direction: row;
     }
+}
+/* Basic Button Styling */
+.btn-add-more {
+    background: linear-gradient(135deg, #006f74, #008080); /* Gradient background */
+    color: #fff; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.2s ease;
+    padding: 0px 25px;
+  
+
+  /* Smooth background and transform transition */
+}
+
+/* Hover Effects */
+.btn-add-more:hover {
+    background: linear-gradient(135deg, #008080, #006f74); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight upward movement */
+}
+
+/* Focused state for accessibility */
+.btn-add-more:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 95, 107, 0.7); /* Add custom focus shadow */
+}
+
+/* Disabled button */
+.btn-add-more:disabled {
+    background: #cccccc; /* Grey background for disabled state */
+    cursor: not-allowed; /* Change cursor to indicate it's disabled */
 }
 
 
@@ -3594,6 +3762,25 @@ select:focus {
     margin-bottom: 5px;
 }
 
+.approvals-filter__input {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.approvals-filter__input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Optional hover effect */
+.approvals-filter__input:hover {
+    border-color: #0056b3;
+}
 
 /* Select inputs */
 
@@ -4159,6 +4346,9 @@ select:focus {
     background-color: #ffebea;
 }
 
+.green-candidate{
+   background-color: rgba(0, 95, 107, 0.1);
+}
 .notifications-filter__group {
     display: flex;
     align-items: center;
@@ -4178,6 +4368,7 @@ select:focus {
 }
 
 .notification-tab-button {
+
     padding: 10px 12px;
     width: 100%;
     border: 1px solid #ccc;
@@ -5067,4 +5258,167 @@ margin-bottom: 20px;
 
 .statistics-candidate-show-button:hover {
     background-color: #004d4d;
+}
+/* Custom Alert Styling */
+.custom-alert {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #005f6b;
+    border: 1px solid #004851;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-width: 80%;
+    padding: 20px;
+    z-index: 2000; /* Make sure it's above the popup overlay */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Showing the Alert */
+.custom-alert.show {
+    opacity: 1;
+    visibility: visible;
+    animation: slideIn 0.4s ease forwards;
+}
+
+/* Alert Content Styling */
+.custom-alert-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-alert-message {
+    font-size: 16px;
+    color: #fff;
+}
+
+/* Close Button Styling */
+.custom-alert-close {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+}
+
+.custom-alert-close:hover {
+    color: #444;
+}
+
+/* Animation for Alert */
+@keyframes slideIn {
+    0% {
+        transform: translate(-50%, -20%);
+    }
+    100% {
+        transform: translate(-50%, 0%);
+    }
+}
+
+.whatsappIcon-number {
+    display: flex;
+    align-items: center; 
+}
+
+.whatsappIcon-number .icon-container {
+    display: flex;
+    align-items: center; 
+    gap: 3px; 
+}
+
+.whatsappIcon-number .whatsapp-icon {
+    width: 14px; /* Set icon width */
+    height: 14px; /* Set icon height */
+}
+
+.whatsappIcon-number .phone-number {
+    font-size: 10px; 
+    color: #333; 
+}
+
+
+.offer-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.client-name-section {
+    margin-bottom: 20px;
+}
+.offer-status.accepted-status {
+    background-color: #a5e5a5;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.offer-heading-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+.heading-row {
+    display: flex;
+    margin-bottom: 10px;
+    gap:10px;
+    justify-content: space-evenly;
+
+}
+
+.heading-title {
+    flex: 0 0 25%; /* Fixed width for titles */
+    font-weight: bold;
+   
+}
+
+.heading-text {
+    flex: 1; /* Take remaining space */
+    font-size: 14px;
+    color: #555;
+}
+
+.offer-heading-list li {
+    margin-bottom: 15px;
+    
+}
+
+.form-row-offer-details {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.form-group-offer-details.input-label {
+    width:30%;
+}
+
+.form-group-offer-details.input-details {
+  width:70%;
+}
+
+.form-group-offer-details label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group-offer-details input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.rejected-status {
+    color: red;
+    font-weight: bold;
+}
+
+.reject-offer-content {
+    border: 2px solid red;
 }

@@ -265,7 +265,60 @@
             </div>
         </div>
         <div class="main-content-global-database">
+                <class class="calendar-cards">
+                    <div class="attendance-total-card">
+                                             
+                                                <select class="submissions-filter-select" id="">
+                                                    <option value="">This Week</option>
+                                                    <option>Last week</option>
+                                                </select>
+                        <span class="presentees">356</span>
+                    </div>
+                    <div class="attendance-day-card current-day" >
+                        <span class="month">Today</span>
+                        <span class="day">Tue</span>
+                        <span class="presentees">356</span>
+                    </div>
+                    <div class="attendance-day-card " >
+                        <span class="month">Tommorrow </span>
+                        <span class="day">Tue</span>
+                        <span class="presentees">356</span>
+                    </div>
+                    <div class="attendance-day-card " >
+                        <span class="month">Jan </span>
+                        <span class="date">02</span>
+                        <span class="day">Tue</span>
+                        <span class="presentees">356</span>
+                    </div>
+                    <div class="attendance-day-card " >
+                        <span class="month">Jan </span>
+                        <span class="date">03</span>
+                        <span class="day">Tue</span>
+                        <span class="presentees">356</span>
+                    </div>
+                    <div class="attendance-day-card " >
+                        <span class="month">Jan</span>
+                        <span class="date">04</span>
+                        <span class="day">Tue</span>
+                        <span class="presentees">356</span>
+                    </div>
+                    <div class="attendance-day-card " >
+                        <span class="month">Dec </span>
+                        <span class="date">31</span>
+                        <span class="day">Tue</span>
+                        <span class="presentees">356</span>
+                    </div>
+                    <div class="attendance-day-card " >
+                        <span class="month">Dec </span>
+                        <span class="date">31</span>
+                        <span class="day">Tue</span>
+                        <span class="presentees">356</span>
+                    </div>
+                    
+                    
+                </class>
             <div class="submissions filter-section">
+                
                 <div class="submissions base-filters">
                     <div class="approvals-filter__group">
                         <label for="" class="approvals-filter__label">Project Name</label>
@@ -292,8 +345,23 @@
               <option value="">Choose Submitted By</option>
             </select>
                     </div>
+                    <div class="approvals-filter__group">
+                        <label for="" class="approvals-filter__label">From</label>
+                    <input type="date" id="from-date" name="from-date" class="approvals-filter__input">
+                      
+                    </div>
+                    <div class="approvals-filter__group">
+                        <label for="" class="approvals-filter__label">To</label>
+                        <input type="date" id="from-date" name="from-date" class="approvals-filter__input">
+                      
+                    </div>
+                    <div class="approvals-filter__group">
+                       
+                        <input type="text" placeholder="Keyword" class="approvals-filter__input">
+                      
+                    </div>
                     <div class="approvals-filter__group approve-button-group">
-                        <button class="submissions schedule-interview schedule-interview-button">Schedule Interview</button>
+                        <button class="submissions schedule-interview schedule-interview-button">Search</button>
                     </div>
                 </div>
             </div>
@@ -416,9 +484,9 @@
                                         <span class="timestamp">12:34 PM</span>
                                     </div>
                                 </div>
+                            </td>
+                            </tr>
             </div>
-            </td>
-            </tr>
             </tbody>
             </table>
         </div>
