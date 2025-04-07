@@ -2105,6 +2105,9 @@ input[type="radio"] {
   .edit-icon {
     fill: #666;
     transition: fill 0.2s ease;
+background-color: #25d2be;
+    border-radius: 50%;
+    padding: 4px;
   }
   
   .edit-toggle-btn:hover .edit-icon {
