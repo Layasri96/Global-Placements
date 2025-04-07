@@ -57,6 +57,10 @@ button {
     cursor: pointer;
 }
 
+a{
+    text-decoration: none;
+    
+}
 .sidebar-container {
     width: 250px;
     height: 100%;
@@ -1114,6 +1118,11 @@ h3 {
     border-radius: 8px;
     background: #005f6b;
 }
+.btn-approvals a{
+   
+    color: white;
+    text-decoration: none;
+}
 
 .btn-add-candidate {
     border: none;
@@ -1551,6 +1560,30 @@ h3 {
 .tab-pane.active {
     display: block;
 }
+/* New container for the eligibility tab pane */
+.eligibility-container {
+    display: flex;
+    gap: 1rem; /* Optional gap between columns */
+    margin-bottom: 2rem;  /* Space below each vacancy */
+    padding-bottom: 1rem; /* Padding for visual breathing room */
+    border-bottom: 1px solid #c7c7c7;  /* Horizontal line separator */
+}
+
+/* Sidebar takes 30% of the width */
+.eligibility-sidebar {
+    flex: 0 0 30%;
+}
+.eligibility-sidebar h3 {
+    color: #006666;
+}
+
+/* Content area takes 70% of the width */
+.eligibility-content {
+    flex: 0 0 70%;
+}
+.eligibility-content h3 {
+    color: #006666;
+}
 
 .content-table {
     width: 100%;
@@ -1568,7 +1601,7 @@ h3 {
 
 .content-table th {
     background-color: #f4f4f4;
-    font-weight: bold;
+  
     color: #333;
 }
 
@@ -1582,6 +1615,45 @@ h3 {
 
 .content-table tr:hover {
     background-color: #f0f0f0;
+}
+
+.perks-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Sidebar (30% Column) for the Role */
+.perks-sidebar {
+  flex: 0 0 30%;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.perks-sidebar h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+/* Content area (70% Column) for Perks & Salary */
+.perks-content {
+  flex: 0 0 70%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Table Styles */
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.content-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -1952,10 +2024,13 @@ input[type="radio"] {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
+ #candidateTable tr:nth-child(odd){
+    background-color: #eee;
+ }
 
 #candidateTable th {
     font-size: 12px;
-    background-color: #e8e7e7;
+    background-color: rgb(180, 179, 179);
 }
 
 #candidateTable th:first-child {
@@ -1974,12 +2049,42 @@ input[type="radio"] {
 #candidateTable td {
     font-size: 10px;
 }
+#candidateTable tr:nth-child(even) {
+    background-color: #e3e3e3;
+}
+#candidateTable tr:nth-child(odd) {
+    background-color: #fff;
+}
 
 #candidateTable th,
 #candidateTable td {
     padding: 12px;
     text-align: center;
     border-bottom: 1px solid #e0e0e0;
+}
+/* Default: candidate rows have a border-bottom */
+
+
+
+/* When the additional info is open, remove border from candidate row */
+.leads-candidate-data.no-border {
+  border-bottom: none;
+}
+
+
+
+/* When active, the additional info row gets the border-bottom */
+.additional-info.active {
+  border-bottom: 2px solid #888;
+}
+
+.submission-canditate-data {
+    border-bottom: 2px solid #888;
+    background-color: #f9f9f9;
+}
+
+.submission-canditate-data.no-border {
+    border-bottom: none;
 }
 
 #candidateTable th,
@@ -2007,14 +2112,7 @@ input[type="radio"] {
     vertical-align: middle;
 }
 
-#candidateTable .status-select {
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ccc;
-    /* padding: 5px; */
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
+
 
 .status-select:hover {
     background-color: #e0e0e0;
@@ -2027,19 +2125,59 @@ input[type="radio"] {
     color: #999;
     text-align: center;
 }
+.global-database-table-column{
+            align-items: flex-start;
+            text-align: left;
+            gap: 5px;
+            font-size: 12px;
+            color: #333;
+            line-height: 1.5;
+            padding: 8px;
+}
+.global-database-table-column .button-group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+}
+.global-database-table-column .submit-button{
+    margin-top: 10px;
+    width: 100%;
+}
+.global-database-table-column p{
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.global-database-table-column .status-select {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    /* padding: 5px; */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
 
 .flag-outline {
     font-size: 20px;
     cursor: pointer;
-    margin-left: 1px;
+   
     color: #006d77;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
 }
 
 .flag-filled {
     font-size: 20px;
     cursor: pointer;
-    margin-left: 1px;
     color: #006d77;
+    display: block;
+
 }
 
 #candidateTable .caret-icon {
@@ -2047,7 +2185,7 @@ input[type="radio"] {
     transition: transform 0.3s ease;
     cursor: pointer;
     margin-left: 1px;
-    color: #999;
+   
 }
 
 #candidateTable .caret-icon.open {
@@ -2095,6 +2233,23 @@ input[type="radio"] {
     display: flex;
     gap: 10px;
     background-color: #fafafa;
+}
+
+.star-rating .icon-button{
+   padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #c7c7c7;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 5px;
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    transition: color 0.3s ease; 
+    width: 80%;
+}
+.star-rating .icon-button svg{
+     height: 20px;
+    width: 20px;
 }
 
 .icon-button {
@@ -2319,9 +2474,6 @@ input[type="radio"] {
     background-color: #004957;
 }
 
-.submissions.candidate-table {
-    /* min-width: 1240px; */
-}
 
 #candidateSubmissionTable {
     width: 100%;
@@ -2362,8 +2514,8 @@ input[type="radio"] {
     font-weight: bold;
 }
 
-#candidateSubmissionTable tr:nth-child(even) {
-    background-color: #f9f9f9;
+#candidateSubmissionTable tr:nth-child(odd) {
+    background-color: #e3e3e3;
 }
 
 #candidateSubmissionTable tr:hover {
@@ -2393,10 +2545,10 @@ input[type="radio"] {
 }
 
 #candidateSubmissionTable .caret-icon {
-    font-size: 1em;
+   font-size: 1em;
     transition: transform 0.3s ease;
     cursor: pointer;
-    color: #999;
+    margin-left: 1px;
 }
 
 #candidateSubmissionTable .caret-icon.open {
@@ -2721,10 +2873,11 @@ input[type="radio"] {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
-    position: absolute;
-    bottom: 8px;
-    left: 35%;
+    display: block;
+    margin: 20px auto 0;   
 }
+
+
 
 .form-group .extra-add {
     cursor: pointer;
@@ -2900,7 +3053,7 @@ input[type="radio"] {
 /* Profile page */
 .main-profile-section{
     display:grid;
-    grid-template-columns: 2fr 5fr 3fr;
+    grid-template-columns: 2fr 5fr 2fr;
     gap: 1rem; 
     width:100%;/* Optional: Add space between the columns */
 }
@@ -2908,6 +3061,7 @@ input[type="radio"] {
     display: flex;
     flex-direction: row; 
     margin: 25px 0px 0px 0px;
+    
 }
 
 .profile-popup {
@@ -2921,6 +3075,7 @@ input[type="radio"] {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     background-color: #fff;
+    width: 100%;
 }
 
 .quick-links {
@@ -3128,12 +3283,121 @@ section {
     border-radius: 8px;
     /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
 }
+#dataflow-details .form-container {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+} 
+
+#dataflow-details .stats-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+#dataflow-details.stats-card.active {
+  border-left: 4px solid #28a745; /* green */
+}
+#dataflow-details .stats-card.inactive {
+  border-left: 4px solid #dc3545; /* red */
+}
+#dataflow-details .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+#dataflow-details .status-badge {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #888; /* fallback color */
+}
+#dataflow-details .stats-card.active .status-badge {
+  background-color: #28a745;
+}
+#dataflow-details .stats-card.inactive .status-badge {
+  background-color: #dc3545;
+}
+
+#dataflow-details .project-name {
+  margin: 0 1rem;
+  font-size: 1rem;
+  flex: 1; /* pushes the timestamp to the right */
+}
+#dataflow-details .timestamp {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+#dataflow-details .card-body p {
+  margin: 0.3rem 0;
+}
+#dataflow-details .view-more-btn {
+  display: block;
+  margin: 1rem auto 0;
+  background-color: #005f6b;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+#dataflow-details .view-more-btn:hover {
+  background-color: #004851;
+}
+
 .form-group-container{
  background-color: #ffffff;
     width: 100%;
     border-radius: 8px;
 }
+#feedback .form-container {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
 
+/* Each feedback item (like a card) */
+#feedback .feedback-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+#feedback .feedback-item p {
+  margin: 0;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Footer for manager name and timestamp */
+#feedback .feedback-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Manager name & timestamp styling */
+#feedback .manager-name {
+  font-style: italic;
+}
+
+#feedback .timestamp {
+  font-weight: 400;
+}
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -3337,6 +3601,7 @@ select:focus {
 
 .star-rating {
     display: flex;
+    
 }
 
 .star {
@@ -5340,7 +5605,79 @@ margin-bottom: 20px;
     font-size: 10px; 
     color: #333; 
 }
+.upload-section {
+    margin-top: 15px;
+}
 
+.upload-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.file-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.uploaded-files-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.uploaded-file-item {
+    display: flex;
+    justify-content: space-between;
+    background: #f8f8f8;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.delete-file {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.confirm-button,
+.upload-button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.confirm-button {
+    background: #28a745;
+    color: white;
+}
+
+.upload-button {
+    background: #007bff;
+    color: white;
+}
+
+.confirm-button:hover {
+    background: #218838;
+}
+
+.upload-button:hover {
+    background: #0056b3;
+}
 
 .offer-details-header {
     display: flex;
@@ -5352,10 +5689,12 @@ margin-bottom: 20px;
     margin-bottom: 20px;
 }
 .offer-status.accepted-status {
-    background-color: #a5e5a5;
+    background-color: #00796b;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
+    align-items: center;
+    display: inline-flex;
 }
 
 .offer-heading-list {
@@ -5400,6 +5739,7 @@ margin-bottom: 20px;
 
 .form-group-offer-details.input-details {
   width:70%;
+  
 }
 
 .form-group-offer-details label {
@@ -5415,10 +5755,886 @@ margin-bottom: 20px;
 }
 
 .rejected-status {
-    color: red;
-    font-weight: bold;
+     background-color: red;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    align-items: center;
+    display: inline-flex;
 }
 
 .reject-offer-content {
     border: 2px solid red;
 }
+
+.additional-info{
+    border-bottom: 1px solid #000;
+ 
+}
+
+.attendance-page-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    gap: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-page-header-left {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #005f6b;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #d7ebee;
+    gap: 20px;
+    /* padding-bottom: 24px; */
+    padding-top: 4px;
+}
+
+.attendance-page-header-right {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.attendance-page-date-dropdown {
+    /* border: 1px solid orangered; */
+    border-radius: 4px;
+    padding: 4px;
+    margin: 4px;
+    background: #ffffff;
+}
+
+.attendance-page-card {
+    border: 1px solid #005f6b;
+    border-radius: 4px;
+    /* background-color: lightpink; */
+    display: flex;
+    gap: 12px;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 20px;
+}
+
+.attendance-page-headericons {
+    font-size: 40px;
+    color: #005f6b;
+    width: 50px;
+    text-align: center;
+    /* border: 1px solid red; */
+    padding: 4px;
+}
+
+.attendance-page-twocards {
+    display: flex;
+    flex-direction:  column;
+    gap: 20px;
+}
+.attendance-page-twocards a{
+    text-decoration: none;
+    color:#000;
+}
+
+.attendance-page-stat-card {
+    /* background-color: #e7f0f8; */
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    /* flex: 1; */
+    /* margin-bottom: 20px; */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.attendance-page-number {
+    /* border: 2px solid orangered; */
+    padding: 10px;
+    /* margin: 20px; */
+    text-align: left;
+    display: flex;
+}
+
+.attendance-page-text {
+    width: 140px;
+    /* color: white; */
+    /* border: 2px solid orangered; */
+    padding: 10px;
+    /* margin: 20px; */
+    text-align: left;
+}
+
+.view-statistics {
+    cursor: pointer;
+    color: #005f6b;
+    /* background-color: aqua; */
+    /* border: 1px solid #007bff; */
+    transition: background-color 0.7s;
+}
+
+.attendance-page-s-icon {
+    /* background-color: red; */
+    padding: 0px 8px;
+}
+
+.view-statistics:hover {
+    /* border: 1px solid #005f6b; */
+    /* border-radius: 2px; */
+    text-decoration: underline;
+}
+
+.attendance-page-timedate {
+    /* border: 2px solid lightseagreen; */
+    width: 200px;
+    padding: 8px;
+    margin: 4px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.attendance-page-time {
+    padding: 4px;
+    position: relative;
+    top: 24px;
+    font-size: 24px;
+    /* border: 1px solid green; */
+}
+
+.attendance-page-headericon {
+    /* border: 2px solid red; */
+    font-size: 48px;
+    color: yellow;
+    padding: 10px;
+    width: 100%;
+}
+
+.attendance-main-content {
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-page-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-top: 16px;
+}
+
+.attendance-page-filter-dropdown {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.attendance-page-filter-button {
+    padding: 10px 20px;
+    background-color: #005f6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.attendance-page-filter-button:hover {
+    background-color: #ffffff;
+    color: #005f6b;
+    border: 1px solid #005f6b;
+}
+
+.attendance-page-requests-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* border: 1px solid red; */
+}
+
+.attendance-page-requests-table th,
+.attendance-page-requests-table td {
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+    text-align: left;
+}
+
+.attendance-page-requests-table th {
+    font-size: 12px;
+}
+
+.attendance-page-requests-table td {
+    font-size: 10px;
+}
+
+.attendance-page-requests-table th {
+    background-color: #f0f0f0;
+}
+.attendance-page-requests-table td:last-child {
+    width: 200px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* Add this CSS to your styles.css file */
+.attendance-page-requests-table td.reason-cell {
+    width: 200px;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.attendance-page-requests-table td.reason-cell.expanded {
+    white-space: normal;
+    overflow: visible;
+}
+
+.attendance-page-action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    /* border: 1px solid red; */
+    font-size: 16px;
+    color: red;
+}
+
+.attendance-page-action-buttons {
+    background: none;
+    border: none;
+    cursor: pointer;
+    /* border: 1px solid red; */
+    font-size: 20px;
+    color: #005f6b;
+    position: relative;
+    top: 1px;
+}
+
+input[type="checkbox"] {
+    width: 12px;
+    /* Control width */
+    height: 12px;
+    /* Control height */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    margin: 0;
+    /* Remove margin to prevent spacing issues */
+    text-align: center;
+    position: relative;
+    
+}
+
+.attendance-page-leavetype {
+    border: 1px solid #005f6b;
+    border-radius: 4px;
+    padding: 4px;
+    margin: none;
+    padding: none;
+    font-size: 10px;
+    color: #005f6b;
+    background-color: #e5eff0;
+}
+
+.tableicons {
+    display: flex;
+    gap: 10px;
+    /* border: 1px solid red; */
+}
+/* Main container styling, similar to .filter-section */
+.post-selection-filter {
+  display: flex;
+  padding: 5px;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  margin: 10px 0px 20px;
+  background-color: white;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Filter button styling */
+.post-selection-filter__button {
+  position: relative;
+  background-color: #fff;
+  color: var(--primary-color);
+  border: 1px solid var(--boxshadow-edge);
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 40px;
+}
+
+.post-selection-filter__button:hover {
+  border: 2px solid var(--sidebar-bg);
+  background-color: #f8f9fa;
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+}
+
+/* Filter count notification */
+.filter-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 50%;
+  padding: 3px 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1;
+  min-width: 20px;
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdowns and inputs */
+.post-selection-filter__select,
+.post-selection-filter__input {
+  background-color: white;
+  color: #333;
+  border: 0.25px solid #c7c7c7;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 150px;
+  height: 40px;
+  flex: 1;
+}
+
+/* Search button */
+.post-selection-filter__search {
+  background-color: #006064;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  height: 40px;
+  transition: background-color 0.3s;
+}
+
+.post-selection-filter__search:hover {
+  background-color: #004d4d;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .post-selection-filter {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post-selection-filter__select,
+  .post-selection-filter__input {
+    width: 100%;
+  }
+
+  .post-selection-filter__search {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+        #postSelectionCandidateTable {
+            width: 100%;
+            /* min-width: 1240px; */
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        #postSelectionCandidateTable th {
+            font-size: 12px;
+            background-color: #e8e7e7;
+        }
+
+        #postSelectionCandidateTable th:first-child {
+            border-radius: 10px 0px 0px;
+        }
+
+        #postSelectionCandidateTable th:last-child {
+            border-radius: 0px 10px 0px 0px;
+        }
+
+        #postSelectionCandidateTable td {
+            font-size: 10px;
+        }
+
+        #postSelectionCandidateTable td {
+            font-size: 10px;
+        }
+
+
+
+        #postSelectionCandidateTable th,
+        #postSelectionCandidateTable td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+
+
+        .post_documents {
+            padding: 5px;
+        }
+
+        /* Candidate Details Container */
+        .post_candidate-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            color: #333;
+            line-height: 1.5;
+            padding: 8px;
+
+
+        }
+
+        /* Candidate Image */
+        .candidate-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Candidate Text Information */
+        .post_candidate-details p {
+            margin: 4px 0;
+            word-wrap: break-word;
+        }
+
+        /* Candidate ID and Name Styling */
+        .post_candidate-details p:first-of-type {
+            font-weight: bold;
+            color: #005f73;
+        }
+
+        /* Candidate Email Styling */
+        .post_candidate-details p:nth-of-type(2) {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Phone Number Styling */
+        .post_candidate-details p:nth-of-type(3) {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* WhatsApp Icon */
+        .post_candidate-details p:nth-of-type(3) svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Placeholder Data */
+        .post_candidate-details p:nth-of-type(4) {
+            font-size: 13px;
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .post_candidate-details {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .candidate-image {
+                margin-bottom: 10px;
+            }
+        }
+
+
+        .document_row {
+            gap: 10px;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for the span elements */
+        .post_documents .document {
+            display: inline-block;
+            width: 100px;
+            /* Fixed width */
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+            /* color: #fff; */
+            font-size: 12px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .green {
+            background-color: #e6ffe6;
+            color: #006600;
+        }
+
+        .yellow {
+            background-color: #ffffcc;
+            color: #999900;
+        }
+
+        .red {
+            background-color: #ffe6e6;
+            color: #cc0000;
+        }
+
+        .gray {
+            background-color: #f2f2f2;
+            color: #666666;
+        }
+
+        .post_important-dates {
+            gap: 15px;
+            padding: 15px;
+        }
+
+        /* Styling for the container */
+
+
+        /* Styling for each label and input group */
+        .post_important-dates div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .post_important-dates label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* Styling for the input fields */
+        .post_important-dates input[type="date"] {
+            padding: 6px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #fff;
+            color: #333;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        /* Focused state for the input fields */
+        .post_important-dates input[type="date"]:focus {
+            border-color: #006600;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+        /* Hover state for the input fields */
+        .post_important-dates input[type="date"]:hover {
+            border-color: #006600;
+        }
+
+        /* Adding responsive behavior */
+        @media (max-width: 768px) {
+            .post_important-dates {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .post_important-dates label {
+                font-size: 13px;
+            }
+
+            .post_important-dates input[type="date"] {
+                font-size: 13px;
+                padding: 8px;
+            }
+        }
+
+
+        /* Container for comments */
+        .comments-container {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: #fafafa;
+        }
+
+        /* Individual comment */
+        .comment {
+            border-bottom: 1px solid #eaeaea;
+            padding: 8px;
+            font-size: 12px;
+            color: #333;
+        }
+
+        .comment:last-child {
+            border-bottom: none;
+        }
+
+        /* Admin and timestamp styling */
+        .comment .admin {
+            font-size: 10px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        /* Add comment section */
+        .add-comment {
+            display: flex;
+            margin-top: 10px;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* History icon styling */
+        .history-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background-color: #eaf5ff;
+            border: 1px solid #005f6b;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .history-icon:hover {
+            background-color: #d4ebff;
+        }
+
+        .history-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #004d4d;
+        }
+
+        .add-comment input {
+            flex: 1;
+            padding: 6px;
+            font-size: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .add-comment button {
+            padding: 6px 10px;
+            font-size: 12px;
+            color: white;
+            background-color: #005f6b;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .add-comment button:hover {
+            background-color: #004d4d;
+        }
+
+        /* Container styling for the dropdowns */
+        .status-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Styling for the dropdowns */
+        .status-container select {
+            padding: 6px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .status-container select:focus {
+            border-color: #005f73;
+            outline: none;
+        }
+
+        /* Offer details container */
+        .offer-details {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #005f73;
+            font-weight: 500;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        /* Info icon styling */
+        .offer-details .info-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background-color: #eaf7fa;
+            border-radius: 50%;
+        }
+
+        .offer-details .info-icon svg {
+            fill: #005f73;
+            width: 12px;
+            height: 12px;
+        }
+
+        /* Overlay */
+
+
+
+
+        /* Candidate Name Section */
+        .candidate-name-section {
+            margin-bottom: 20px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Table */
+        .upload-documents-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .upload-documents-table th,
+        .upload-documents-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .upload-documents-table th {
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+
+        .document-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .document-item span {
+            margin-right: 10px;
+        }
+
+        .delete-document {
+            cursor: pointer;
+            color: red;
+            font-size: 1rem;
+        }
+
+        .document-name-input,
+        .upload-input,
+        .status-dropdown {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        /* Add Document */
+        .add-document-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #addDocumentButton {
+            background: none;
+            color: teal;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .document.green {
+            background-color: #e6f3e6;
+            color: green;
+        }
+
+        .document.yellow {
+            background-color: #fff7e6;
+            color: #ff9900;
+        }
+
+        .document.red {
+            background-color: #ffe6e6;
+            color: red;
+        }
+
+        .document.gray {
+            background-color: #f0f0f0;
+            color: #888;
+        }
+
+        /* Save Button */
+        .popup-footer {
+            text-align: center;
+        }
+
+        .status-dropdown.status-completed {
+            background-color: #e6f3e6;
+        }
+
+        .status-dropdown.status-in-progress {
+            background-color: #fff7e6;
+        }
+
+        .status-dropdown.status-not-started {
+            background-color: #ffe6e6;
+        }
+
+        .save-button {
+            background-color: teal;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
